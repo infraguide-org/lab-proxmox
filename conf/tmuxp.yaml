@@ -1,0 +1,56 @@
+---
+session_name: stack
+windows:
+  - window_name: openstack
+    layout: tiled
+    shell_command_before:
+      - cd ~/
+    panes:
+      - ssh -t controller01.mgmt.wrx.sckt.net sudo su -
+      - ssh -t controller02.mgmt.wrx.sckt.net sudo su -
+      - ssh -t controller03.mgmt.wrx.sckt.net sudo su -
+      - ssh -t network01.mgmt.wrx.sckt.net    sudo su -
+      - ssh -t network02.mgmt.wrx.sckt.net    sudo su -
+      - ssh -t network03.mgmt.wrx.sckt.net    sudo su -
+      - ssh -t monitor01.mgmt.wrx.sckt.net    sudo su -
+      - cd  ~/openstack/
+      - ssh -t testing.mgmt.wrx.sckt.net
+  - window_name: compute
+    layout: tiled
+    shell_command_before:
+      - cd ~/
+    panes:
+      - ssh -t compute01.mgmt.wrx.sckt.net sudo su -
+      - ssh -t compute02.mgmt.wrx.sckt.net sudo su -
+      - ''
+      - ssh -t compute11.mgmt.wrx.sckt.net sudo su -
+      - ssh -t compute12.mgmt.wrx.sckt.net sudo su -
+      - ''
+      - ''
+      - ''
+      - ''
+  - window_name: ceph
+    layout: tiled
+    shell_command_before:
+      - cd ~/
+    panes:
+      - ssh -t cephmon01.strg.wrx.sckt.net sudo su -
+      - ssh -t cephmon02.strg.wrx.sckt.net sudo su -
+      - ssh -t cephmon03.strg.wrx.sckt.net sudo su -
+      - ssh -t cephosd01.strg.wrx.sckt.net sudo su -
+      - ssh -t cephosd02.strg.wrx.sckt.net sudo su -
+      - ssh -t cephosd03.strg.wrx.sckt.net sudo su -
+      - sudo su -
+      - sudo su -
+      - cd  ~/ceph
+  - window_name: infra
+    layout: tiled
+    shell_command_before:
+      - cd ~/
+    panes:
+      - ssh -t dns.wrx.sckt.net        sudo su -
+      - ssh -t proxy.wrx.sckt.net      sudo su -
+      - ssh -t recorder.wrx.sckt.net   sudo su -
+      - ssh -t registry.wrx.sckt.net   sudo su -
+      - ssh -t hypervisor.wrx.sckt.net
+      - ''
