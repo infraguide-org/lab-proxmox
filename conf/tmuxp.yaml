@@ -1,20 +1,6 @@
 ---
 session_name: stack
 windows:
-  - window_name: openstack
-    layout: tiled
-    shell_command_before:
-      - cd ~/
-    panes:
-      - ssh -t controller01.mgmt.wrx.sckt.net sudo su -
-      - ssh -t controller02.mgmt.wrx.sckt.net sudo su -
-      - ssh -t controller03.mgmt.wrx.sckt.net sudo su -
-      - ssh -t network01.mgmt.wrx.sckt.net    sudo su -
-      - ssh -t network02.mgmt.wrx.sckt.net    sudo su -
-      - ssh -t network03.mgmt.wrx.sckt.net    sudo su -
-      - ssh -t monitor01.mgmt.wrx.sckt.net    sudo su -
-      - cd  ~/openstack/
-      - ssh -t testing.mgmt.wrx.sckt.net
   - window_name: compute
     layout: tiled
     shell_command_before:
@@ -22,10 +8,10 @@ windows:
     panes:
       - ssh -t compute01.mgmt.wrx.sckt.net sudo su -
       - ssh -t compute02.mgmt.wrx.sckt.net sudo su -
-      - ''
+      - ssh -t compute03.mgmt.wrx.sckt.net sudo su -
       - ssh -t compute11.mgmt.wrx.sckt.net sudo su -
       - ssh -t compute12.mgmt.wrx.sckt.net sudo su -
-      - ''
+      - ssh -t compute13.mgmt.wrx.sckt.net sudo su -
       - ''
       - ''
       - ''
