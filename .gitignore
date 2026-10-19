@@ -1,4 +1,5 @@
 # Source: https://github.com/infraguide-org/lab-proxmox
 # Copyright (c) 2026 infraguide.org, MIT License
+slides/dist/
 *.swp
 *.swo
