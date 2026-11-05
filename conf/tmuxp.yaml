@@ -1,7 +1,7 @@
 # Source: https://github.com/infraguide-org/lab-proxmox
 # Copyright (c) 2026 infraguide.org, MIT License
 ---
-session_name: stack
+session_name: lab-proxmox
 windows:
   - window_name: compute
     layout: tiled
